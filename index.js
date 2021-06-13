@@ -210,6 +210,9 @@ client.on('message', async (message) => {
     message.reply(`Removed all subscriptions for ${subs[args[0]].name}`)
     delete subs[args[0]]
     update()
+  } else if (command === 'restart') {
+    message.reply(`Bye Felica...`)
+    process.exit()
   }
 })
 
