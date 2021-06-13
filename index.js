@@ -124,7 +124,8 @@ client.on('message', async (message) => {
       `I hear you want some help! These are the following commands you can use:\n 
         \`$list\`: this will list all the current subscriptions\n
         \`$add <contract> <action>\`: this will add a subscription to a contract for a specific action on OpenSea\n
-        \`$remove <contract>\`: removes all subscriptions from that contract\n`
+        \`$remove <contract>\`: removes all subscriptions from that contract\n
+                \`$restart\`: kills the bot and starts it again`
     )
   } else if (command === 'list') {
     Object.values(subs).map((item) => {
@@ -161,7 +162,7 @@ client.on('message', async (message) => {
     // Validation
     if (args.length != 2)
       return message.reply(
-        `Incorrect arguments length. Only 3 args allowed: <platform> <contract> <action>`
+        `Incorrect arguments length. Only 2 args allowed: <contract> <action>`
       )
 
     if (!['successful', 'mint', 'transfer'].some((item) => item === args[1]))
