@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "flat-cache": "^3.0.4",
+    "isomorphic-fetch": "^3.0.0"
+  }
+}
