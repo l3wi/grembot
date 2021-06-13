@@ -122,10 +122,10 @@ client.on('message', async (message) => {
   if (command === 'help') {
     return message.reply(
       `I hear you want some help! These are the following commands you can use:\n 
-        \`$list\`: this will list all the current subscriptions\n
-        \`$add <contract> <action>\`: this will add a subscription to a contract for a specific action on OpenSea\n
-        \`$remove <contract>\`: removes all subscriptions from that contract\n
-                \`$restart\`: kills the bot and starts it again`
+      \`$list\`: this will list all the current subscriptions\n
+      \`$add <contract> <action>\`: this will add a subscription to a contract for a specific action on OpenSea\n
+      \`$remove <contract>\`: removes all subscriptions from that contract\n
+      \`$restart\`: kills the bot and starts it again`
     )
   } else if (command === 'list') {
     Object.values(subs).map((item) => {
